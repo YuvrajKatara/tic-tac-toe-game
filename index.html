@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="tictactoe.css">
+</head>
+<body>
+
+<main>
+  <h1 class="title">
+    TIC <span>TAC</span> TOE
+  </h1>
+
+  <div class="container">
+    <div class="board-wrapper">
+      <div class="win-line" id="win-line"></div>
+
+      <div class="game-board">
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+        <button class="cell"></button>
+      </div>
+    </div>
+  </div>
+
+    <div class="controls">
+        <button id="new-game">New Game</button>
+        <button id="reset-game">Reset</button>
+        <button id="stats-btn">Stats</button>
+    </div>
+
+</main>
+
+
+<div class="modal hidden" id="stats-modal">
+  <div class="modal-content">
+    <h2>Game Stats</h2>
+    <p id="played"></p>
+    <p id="xwins"></p>
+    <p id="owins"></p>
+    <p id="draws"></p>
+
+    <button class="close-pill" onclick="closeStats()">Close</button>
+  </div>
+</div>
+
+<script src="tictactoe.js"></script>
+</body>
+</html>

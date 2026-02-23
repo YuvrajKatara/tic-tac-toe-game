@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #548687;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+}
+
+
+.title {
+  margin-top: 20px;
+  font-size: 2.8rem;
+  letter-spacing: 4px;
+}
+
+.title span {
+  color: #84a98c;
+}
+
+
+.container {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board-wrapper {
+  position: relative;
+}
+
+.game-board {
+  height: 60vmin;
+  width: 60vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5vmin;
+}
+
+
+.cell {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1vmin;
+  border: none;
+  background-color: darkkhaki;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.15);
+  font-size: 8vmin;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+.cell:active {
+  transform: scale(0.95);
+}
+
+.cell.x { color: #f05454; }
+.cell.o { color: #2563eb; }
+
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  background: #2f3e46;
+  color: white;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s cubic-bezier(.22,.61,.36,1),
+    box-shadow 0.25s,
+    background 0.25s;
+}
+
+.controls button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  background: #354f52;
+}
+
+.controls button:active {
+  transform: scale(0.95);
+}
+
+
+.win-line {
+  position: absolute;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #2f3e46;
+  padding: 20px;
+  border-radius: 12px;
+  width: 260px;
+  color: white;
+}
+
+.hidden { display: none; }
+
+.close-pill {
+  margin-top: 15px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #84a98c;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.close-pill:hover {
+  transform: scale(1.05);
+}
+
+.close-pill:active {
+  transform: scale(0.95);
+}
